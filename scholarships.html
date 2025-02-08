@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarships</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="scholarships.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <video autoplay loop muted plays-inline class="background-clip">
+            <source src="Images/IMG_4359 (2).MOV" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="content">
+            <header>
+                <h1 data-i18n="Scholarship Opportunities">
+                    <i class="fas fa-graduation-cap"></i> Стипендия<i class="fas fa-hand-holding-usd"></i>
+                </h1>
+                
+                <div id="searchContainer">
+                    <span id="searchIcon" class="search-icon">&#128269;</span>
+                    <input type="text" id="searchBar" placeholder="Search for scholarships..." onkeyup="searchFunction()" />
+                </div>
+            </header>
+            <section id="scholarship-info">
+                <h2>Доступные стипендии</h2>
+                <p>Мы предлагаем различные стипендии для студентов, увлеченных информационными технологиями и программированием.</p>
+                <ul>
+                    <li>Грант на обучение Python и искусственному интеллекту.</li>
+                    <li>Глобальный стипендиальный конкурс НИУ ВШЭ 2024 года в России.</li>
+                    <li>Стипендия губернатора Белгородской области</li>
+                </ul>
+            </section>
+            <section id="registration">
+                <h2>Регистрация</h2>
+                <p>Заполните форму ниже, чтобы подать заявку на получение стипендии.</p>
+                <form id="scholarshipForm" action="#" method="post">
+                    <label for="fullName">ФИО:</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                    
+                    <label for="phone">номер телефона:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    
+                    <label for="email">Почта:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="languages">Известные языки программирования:</label>
+                    <input type="text" id="languages" name="languages" placeholder="e.g., Python, JavaScript, C++, C#, 1C" required>
+        
+                    <button type="submit">Подайте заявку сейчас</button>
+                </form>
+            </section>
+            <footer>
+                <a href="index.html" class="back-link">Назад</a>
+            </footer>
+        </div>
+    </div>
+
+     <!-- Links appear when hovering over the right border -->
+     <div class="right-links">
+        <a href="index.html">Главный</a>
+        <a href="courses.html">Курсы</a>
+        <a href="scholarships.html">Cтипендии</a>
+    </div>  
+
+    <script>
+        // Form submission logic
+        const form = document.getElementById('scholarshipForm');
+        const submitBtn = document.getElementById('submitBtn');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the actual form submission (for testing)
+
+            // Change button to show success (green checkmark)
+            submitBtn.innerHTML = '✔ Success';  // Replace text with a green checkmark icon
+            submitBtn.style.backgroundColor = '#28a745';  // Change button color to green
+            submitBtn.disabled = true;  // Disable the button to prevent further submissions
+
+            // Reset the button after a short delay (e.g., 3 seconds)
+            setTimeout(function() {
+                submitBtn.innerHTML = 'Apply Now';  // Reset button text
+                submitBtn.style.backgroundColor = '#007BFF';  // Reset button color
+                submitBtn.disabled = false;  // Re-enable the button
+            }, 3000); // 3-second delay
+        });
+    </script>
+</body>
+</html>

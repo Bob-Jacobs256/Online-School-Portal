@@ -1,0 +1,100 @@
+/* registration.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.registration-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.registration-container h2 {
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+
+.registration-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.registration-container input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.registration-container button {
+    background-color: #f40014;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.registration-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Style for the hover links */
+.right-links {
+    position: fixed;
+    right: -150px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: right 0.3s ease;
+}
+
+.right-links a {
+    display: block;
+    padding: 15px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.right-links a:hover {
+    background-color: #0056b3;
+}
+
+body:hover .right-links {
+    right: 0; 
+}
+
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 60px;
+    }
+
+    .content h2 {
+        font-size: 30px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+
+    .content form input {
+        width: 80%;
+    }
+}

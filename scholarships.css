@@ -1,0 +1,208 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+header {
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    position: relative;
+}
+
+#searchContainer {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#searchIcon {
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#searchBar {
+    padding: 10px;
+    width: 0; /* Initially hidden */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: width 0.3s ease; /* Smooth transition for expanding input field */
+    opacity: 0;
+    visibility: hidden;
+    margin-left: 10px; /* Space between icon and input field */
+}
+
+/* When hovering over the search icon, show the search bar */
+#searchContainer:hover #searchBar {
+    width: 250px; /* Width of the input field when revealed */
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Optional: Change the icon color on hover */
+#searchContainer:hover #searchIcon {
+    color: #007BFF; /* Change icon color on hover */
+}
+
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.background-clip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire container */
+    z-index: -1;
+}
+
+.content {
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+}
+
+.content h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.content h2 {
+    color: #007BFF;
+    font-size: 40px;
+}
+
+.content p {
+    line-height: 1.6;
+    font-size: 20px;
+}
+
+.content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.content ul li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.content form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content form label {
+    margin: 10px 0 5px;
+    font-size: 18px;
+}
+
+.content form input {
+    padding: 10px;
+    width: 300px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.content form button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.content form button:hover {
+    background-color: #0056b3;
+}
+
+.content form button:active {
+    background-color: #00408e;
+}
+
+.content form button[disabled] {
+    background-color: #ccc;  /* Disabled button style */
+    cursor: not-allowed;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    background-color: #0056b3;
+    color: #000;
+}
+
+/* Style for the hover links */
+.right-links {
+    position: fixed;
+    right: -150px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: right 0.3s ease;
+}
+
+.right-links a {
+    display: block;
+    padding: 15px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.right-links a:hover {
+    background-color: #0056b3;
+}
+
+body:hover .right-links {
+    right: 0; 
+}
+
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 60px;
+    }
+
+    .content h2 {
+        font-size: 30px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+
+    .content form input {
+        width: 80%;
+    }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+    <div class="registration-container">
+        <h2>Зарегистрируйтесь на курс</h2>
+        <form id="registration-form">
+            <label for="name">ФИО :</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Почта:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">номер телефона:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="course">Выберите курс:</label>
+            <input type="text" id="course" name="course" readonly>
+
+            <button type="submit">Зарегистрировать </button>
+        </form>
+    </div>
+
+     <!-- Links appear when hovering over the right border -->
+     <div class="right-links">
+        <a href="index.html">Главный</a>
+        <a href="courses.html">Курсы</a>
+        <a href="scholarships.html">Cтипендии</a>
+    </div> 
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const selectedCourse = urlParams.get('course');
+        document.getElementById('course').value = selectedCourse || 'Курс не выбран';
+    </script>
+</body>
+</html>
